@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container } from '../pages/layout.module.css'
 import {
   container,
   heading,
