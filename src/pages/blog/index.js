@@ -14,7 +14,7 @@ const BlogPage = ({ data }) => {
                 {node.frontmatter.title}
               </Link>
             </h2>
-            <p>Posted: {node.frontmatter.slug}</p>
+            <p>Posted: {node.frontmatter.date}</p>
           </article>
         ))
       }
@@ -31,12 +31,12 @@ export const query = graphql`
           title
           slug
         }
+        
         id
       }
     }
   }
 `
-
 
 export const Head = () => <Seo title="My Blog Posts" />
 
