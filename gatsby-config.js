@@ -6,6 +6,16 @@ module.exports = {
     title: "My Super Cool Blog",
   },
   plugins: [
+    {
+    resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "DrupalGraqhQL",
+        // This is field under which it's accessible
+        fieldName: "Drupal",
+        url: "https://csc496f22demo.tldr.dev/graphql",
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
@@ -15,7 +25,5 @@ module.exports = {
         path: `${__dirname}/blog/`,
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
   ],
 };
